@@ -103,35 +103,30 @@ jobs:
         run: |
           python -m cibuildwheel --output-dir wheelhouse
         env:
-          CIBW_ARCHS_LINUX: ${{ matrix.arch }
           CIBW_BUILD: "cp35-*"
       
       - name: Build wheels for CPython 3.6
         run: |
           python -m cibuildwheel --output-dir wheelhouse
         env:
-          CIBW_ARCHS_LINUX: ${{ matrix.arch }
           CIBW_BUILD: "cp36-*"
 
       - name: Build wheels for CPython 3.7
         run: |
           python -m cibuildwheel --output-dir wheelhouse
         env:
-          CIBW_ARCHS_LINUX: ${{ matrix.arch }
           CIBW_BUILD: "cp37-*"
           
       - name: Build wheels for CPython 3.8
         run: |
           python -m cibuildwheel --output-dir wheelhouse
         env:
-          CIBW_ARCHS_LINUX: ${{ matrix.arch }
           CIBW_BUILD: "cp38-*"
           
       - name: Build wheels for CPython 3.9
         run: |
           python -m cibuildwheel --output-dir wheelhouse
         env:
-          CIBW_ARCHS_LINUX: ${{ matrix.arch }
           CIBW_BUILD: "cp39-*"
 
       - uses: actions/upload-artifact@v2
