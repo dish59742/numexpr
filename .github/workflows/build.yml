@@ -127,7 +127,6 @@ jobs:
           CIBW_BUILD: "cp38-*"
           CIBW_ARCHS_LINUX: ${{ matrix.arch }
           
-
       - name: Build wheels for CPython 3.9
         run: |
           python -m cibuildwheel --output-dir wheelhouse
